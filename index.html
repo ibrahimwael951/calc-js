@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon-16x16.png">
+    <title>pro 5</title>
+</head>
+<!-- ---------------------------------------------- -->
+<body>
+<!-- 
+    <div>
+        <input type="text" placeholder="Input Outline">
+        <span class="bottom"></span>
+        <span class="right"></span>
+        <span class="top"></span>
+        <span class="left"></span>
+      </div> -->
+      
+
+    <button id="scrool-window">^</button>
+    <div id="theme">
+<button id="dark">  dark</button>
+<button id="light">light </button>
+</div>
+<div class="crud">
+    
+    <div class="head">
+        <h1>storage</h1>
+        <p>program to make life easy</p>
+     </div>
+
+<button id="show-input">create</button>
+ <!-- -----------------------creat erea----------------------- -->
+ 
+         <div id="input1"  >
+            <div class="inputs23">
+                <input  type="text"  id="title" placeholder="title">
+                <span class="bottom"></span>
+                <span class="right"></span>
+                <span class="top"></span>
+                <span class="left"></span>
+              </div>  
+              
+                    <!-- <input type="text"  id="title" placeholder="title"> -->
+                    <div class="inputs23">
+                        <input  type="number" name="" id="count" placeholder="count">
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                      </div>  
+
+                        <div class="inputs23">
+                        <input  type="text" name="" id="category" placeholder="category">
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                      </div>
+                                <!-- <input type="number" name="" id="count" placeholder="count">
+                                <input type="text" name="" id="category" placeholder="category">
+                     -->
+                    <div class="price">
+                         <div class="inputs23">
+                        <input onkeyup="gettotal()" type="number" id="price" placeholder="price">
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                      </div>  
+                      
+                      <div class="inputs23">
+                        <input  onkeyup="gettotal()" type="number" id="texes" placeholder="texes">
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                      </div>  
+                      
+                      <div class="inputs23">
+                        <input onkeyup="gettotal()" type="number" id="ads" placeholder="ads">
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                      </div>  
+                      
+                      <div class="inputs23">
+                        <input onkeyup="gettotal()" type="number" id="discount" placeholder="discount">
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                      </div>  
+                            <!-- <input onkeyup="gettotal()" type="number" id="price" placeholder="price">
+                            <input onkeyup="gettotal()" type="number" id="texes" placeholder="texes">
+                            <input onkeyup="gettotal()" type="number" id="ads" placeholder="ads">
+                             <input onkeyup="gettotal()" type="number" id="discount" placeholder="discount">
+                          -->   <small id="total"> </small> 
+                                </div>         
+
+                                <button id="submit"  >create</button>
+        </div>
+<!-- -------------------------- search area------------------------------------- -->
+            <div class="outputs">
+                <div class="search-box">
+                    <div class="inputs23">
+                        <input  onkeyup=" searchdata(this.value)" type="text"  id="search" placeholder="search">
+                        <span class="bottom"></span>
+                        <span class="right"></span>
+                        <span class="top"></span>
+                        <span class="left"></span>
+                      </div>  
+                    <!-- <input onkeyup=" searchdata(this.value)" type="text"  id="search" placeholder="search"> -->
+                    <div class="btn-search">
+                        <button onclick="getsearchmood(this.id)" id="searchtitle">search by title</button>
+                        <button onclick="getsearchmood(this.id)" id="searchprice">search by ptice</button>
+                        <button onclick="getsearchmood(this.id)" id="searchcategory">search by category</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ----------------------table------------------------ -->
+     <div id="deleteall" > </div>
+   <div id="content"  > 
+        <h1>are u sure u want delete ?</h1> 
+   <button id="dell" onclick=" deleteall() ,showdata() , delhide()"> delete all  </button>
+   <button id="cancel" onclick=" delhide() , showdata()">  cancel </button>
+    </div> 
+ 
+        
+            <div class="table">
+    <table>
+        <tr> 
+                    <!-- --head-- -->
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+
+
+            <!-- --body-- -->
+
+            <tbody id="tbody">
+
+ 
+            </tbody>
+        </tr>
+</div>
+
+
+</div>
+
+    <!-- ---------------------------------------------- -->
+    <script src="java.js"></script>    
+</body>
+</html>
